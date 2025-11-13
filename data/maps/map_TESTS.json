@@ -4,7 +4,7 @@
         "folder": "main",
         "age": "3",
         "last_adm": "unknown",
-        "mod_time": "2025-11-13 18:03:05",
+        "mod_time": "2025-11-13 18:19:09",
         "def_vlan": "-1",
         "width": "1800",
         "height": "1000",
@@ -798,8 +798,8 @@
             "id": 5,
             "name": "tetetete",
             "xy": {
-                "x": 1440.0,
-                "y": 264.0
+                "x": 1380.0,
+                "y": 302.0
             },
             "model": "DES-3200-28 rev C",
             "note": ""

@@ -122,7 +122,7 @@ class ServerGUI(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Pinger Server")
+        self.setWindowTitle("NMS Server")
         self.setFixedSize(800, 600)
         self.process = None
         self.ping_worker = None
@@ -243,7 +243,7 @@ class ServerGUI(QMainWindow):
             QTextEdit { background-color: #444; color: #FFC107; border: 1px solid #555; border-radius: 4px; }
             QStatusBar { background-color: #333; color: #FFC107; }
         """)
-        self.status.setStyleSheet("font-weight: bold; font-size: 16px;")
+        self.status.setStyleSheet("font-weight: bold; font-size: 14px;")
         self.logs.setStyleSheet("font-family: Consolas; font-size: 12px;")
 
         self.load_config()

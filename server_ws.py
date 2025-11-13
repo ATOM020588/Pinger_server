@@ -23,11 +23,7 @@ OPERATORS_DIR = os.path.join(DATA_DIR, "operators")
 
 os.makedirs(MAPS_DIR, exist_ok=True)
 os.makedirs(OPERATORS_DIR, exist_ok=True)
-print("OPERATORS_DIR =", OPERATORS_DIR)
 
-# Создаём папки
-os.makedirs(MAPS_DIR, exist_ok=True)
-os.makedirs(OPERATORS_DIR, exist_ok=True)
 
 # === ЛОГИРОВАНИЕ ===
 def log(msg):
@@ -172,6 +168,88 @@ async def handler(websocket):
                             response = {"request_id": request_id, "success": True, "operators": users}
                         except Exception as e:
                             response["error"] = f"Ошибка чтения: {e}"
+                
+                # === ПРОВЕРКА ИЗМЕНЕНИЙ PINGOK НА КАРТЕ ===
+                elif action == "check_ping_updates":
+                    map_id = data.get("map_id")
+                    client_hashes = data.get("hashes", {})  # {index: hash(pingok), ...}
+
+                    if not map_id:
+                        response["error"] = "map_id required"
+                    else:
+                        file_path = get_full_path(f"maps/map_{map_id}.json")
+                        if not os.path.exists(file_path):
+                            response["error"] = "Map not found"
+                        else:
+                            try:
+                                with open(file_path, "r", encoding="utf-8") as f:
+                                    current_map = json.load(f)
+
+                                switches = current_map.get("switches", [])
+                                updates = []
+
+                                for idx, switch in enumerate(switches):
+                                    current_pingok = switch.get("pingok", False)
+                                    # Приводим к строке для стабильного хеша
+                                    current_hash = str(current_pingok).lower()
+
+                                    client_hash = client_hashes.get(str(idx))
+
+                                    if client_hash != current_hash:
+                                        updates.append({
+                                            "index": idx,
+                                            "pingok": current_pingok
+                                        })
+
+                                response = {
+                                    "request_id": request_id,
+                                    "success": True,
+                                    "updates": updates,
+                                    "count": len(updates)
+                                }
+
+                                if updates:
+                                    log(f"Ping updates sent for map {map_id}: {len(updates)} changes")
+
+                            except Exception as e:
+                                response["error"] = f"Read error: {e}"
+                                
+                # === МАССОВЫЙ ПИНГ УСТРОЙСТВ НА КАРТЕ ===
+                elif action == "ping_switches":
+                    ping_data = data.get("ping_data", [])  # [{ "index": int, "ip": str }, ...]
+                    timeout_ms = data.get("timeout_ms", CONFIG["ping_timeout_ms"])
+
+                    if not ping_data:
+                        response["error"] = "No devices to ping"
+                    else:
+                        # Собираем только те, у кого есть IP
+                        ips_to_ping = [item["ip"] for item in ping_data if item.get("ip")]
+                        tasks = [asyncio.to_thread(ping_device, ip, timeout_ms) for ip in ips_to_ping]
+
+                        try:
+                            ping_results = await asyncio.gather(*tasks)
+
+                            # Формируем ответ
+                            results = []
+                            ping_idx = 0
+                            for item in ping_data:
+                                idx = item["index"]
+                                if item.get("ip"):
+                                    res = ping_results[ping_idx]
+                                    results.append({"index": idx, "success": res["success"]})
+                                    ping_idx += 1
+                                else:
+                                    results.append({"index": idx, "success": False})
+
+                            response = {
+                                "request_id": request_id,
+                                "success": True,
+                                "results": results
+                            }
+                            log(f"Ping switches completed: {len(results)} devices (map from {client_ip})")
+                        except Exception as e:
+                            response["error"] = f"Ping error: {str(e)}"
+                            log(f"Ping switches error: {e}")
 
                 # === ОТПРАВКА ОТВЕТА ===
                 await websocket.send(json.dumps(response))

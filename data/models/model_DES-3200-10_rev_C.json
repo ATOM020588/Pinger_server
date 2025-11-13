@@ -1,0 +1,20 @@
+{
+    "id": "model_DES-3200-10_rev_C",
+    "model_name": "DES-3200-10 rev C",
+    "olt": false,
+    "neobills": "neobills1",
+    "uplink": "10",
+    "ports_count": "10",
+    "mag_ports": "9-10",
+    "firmware": {
+        "id": "model_DES-3200-28_rev_C",
+        "model_name": "DES-3200-28 rev C",
+        "firmware": "con vlan vlan%MVLAN% add un 1\nconf filter dhcp ports 1 state disable\nconfig address_binding ip_mac ports 1 arp_inspection disable\nconf ipif System dhcp"
+    },
+    "syntax": {
+        "Общие": "main",
+        "Hostname": "hostname",
+        "IP": "%IP"
+    },
+    "image": "model_DES-3200-10_rev_C.jpg"
+}

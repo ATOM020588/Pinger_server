@@ -1,0 +1,6 @@
+{
+    "ping_timeout_ms": 3000,
+    "packet_count": 1,
+    "packet_interval": 1000,
+    "scan_interval": 30
+}

@@ -1,0 +1,14 @@
+{
+    "map": {
+        "name": "01_Карта",
+        "width": "1200",
+        "height": "800",
+        "mod_time": "2025-10-23 11:36:17"
+    },
+    "switches": [],
+    "plan_switches": [],
+    "users": [],
+    "soaps": [],
+    "legends": [],
+    "magistrals": []
+}

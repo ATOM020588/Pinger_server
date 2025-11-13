@@ -1,55 +1,5 @@
 [
     {
-        "surname": "Петров",
-        "name": "Пётр",
-        "department": "Техник",
-        "login": "petrov",
-        "group": "1759400036003",
-        "permissions": {
-            "edit_maps": true,
-            "edit_syntax": false,
-            "view_global_problems": false,
-            "add_global_problems": false,
-            "view_operators": false,
-            "edit_operators": false,
-            "telnet": false,
-            "flood": false,
-            "configure_switch": false,
-            "reset_firewall": false,
-            "edit_dhcp_mode": false,
-            "inventory": false,
-            "add_discrepancies": false,
-            "global_report_filter": false,
-            "add_global_no_call": false
-        },
-        "id": "2"
-    },
-    {
-        "surname": "Нестеренко",
-        "name": "Олег",
-        "department": "IT",
-        "login": "oleg",
-        "group": "1759400036003",
-        "permissions": {
-            "edit_maps": true,
-            "edit_syntax": true,
-            "view_global_problems": true,
-            "add_global_problems": true,
-            "view_operators": true,
-            "edit_operators": true,
-            "telnet": true,
-            "flood": true,
-            "configure_switch": true,
-            "reset_firewall": true,
-            "edit_dhcp_mode": true,
-            "inventory": true,
-            "add_discrepancies": true,
-            "global_report_filter": true,
-            "add_global_no_call": true
-        },
-        "id": "1759400094043"
-    },
-    {
         "surname": "Овчинников",
         "name": "Сергей",
         "department": "IT",
@@ -72,6 +22,8 @@
             "global_report_filter": true,
             "add_global_no_call": true
         },
-        "id": "1759400094044"
+        "password": "30282be22ebd29f47d4207dc56da908d45ca67789df2011a1720920e0c6c59d7",
+        "id": "1763029793655",
+        "last_activity": "2025-11-13 18:01:12"
     }
 ]

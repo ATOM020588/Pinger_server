@@ -1,0 +1,201 @@
+# server_ws.py
+import asyncio
+import websockets
+import json
+import os
+import subprocess
+from datetime import datetime
+import pickle
+
+# === КОНФИГ ===
+CONFIG = {
+    "ping_timeout_ms": 3000,
+    "packet_count": 1,
+    "packet_interval": 1000,
+    "scan_interval": 240
+}
+
+# === ПУТИ ===
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+MAPS_DIR = os.path.join(DATA_DIR, "maps")
+OPERATORS_DIR = os.path.join(DATA_DIR, "operators")
+
+os.makedirs(MAPS_DIR, exist_ok=True)
+os.makedirs(OPERATORS_DIR, exist_ok=True)
+print("OPERATORS_DIR =", OPERATORS_DIR)
+
+# Создаём папки
+os.makedirs(MAPS_DIR, exist_ok=True)
+os.makedirs(OPERATORS_DIR, exist_ok=True)
+
+# === ЛОГИРОВАНИЕ ===
+def log(msg):
+    line = f"{datetime.now().strftime('%H:%M:%S')} - {msg}"
+    print(line)
+    log_path = os.path.join("../logs", "server.log")
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(line + "\n")
+
+# === ПИНГ УСТРОЙСТВА ===
+def ping_device(ip, timeout_ms):
+    try:
+        cmd = ['ping', '-n', '1', '-w', str(timeout_ms), ip]
+        output = subprocess.check_output(
+            cmd, stderr=subprocess.STDOUT, timeout=timeout_ms/1000 + 2
+        )
+        return {"success": b'TTL=' in output, "ip": ip}
+    except Exception:
+        return {"success": False, "ip": ip}
+
+# === ПОЛНЫЙ ПУТЬ К ФАЙЛУ ===
+def get_full_path(path):
+    """Безопасно строит путь внутри DATA_DIR"""
+    full_path = os.path.normpath(os.path.join(DATA_DIR, path))
+    if not full_path.startswith(os.path.abspath(DATA_DIR)):
+        raise ValueError("Invalid path: outside DATA_DIR")
+    return full_path
+
+# === ОБРАБОТЧИК КЛИЕНТА ===
+async def handler(websocket):
+    client_ip = websocket.remote_address[0]
+    log(f"Client connected: {client_ip}")
+
+    try:
+        async for message in websocket:
+            try:
+                data = json.loads(message)
+                action = data.get("action")
+                request_id = data.get("request_id")
+                response = {"request_id": request_id, "success": False, "error": "Unknown action"}
+
+                log(f"Action: {action} | Path: {data.get('path', data.get('filename', ''))} | Client: {client_ip}")
+
+                # === ПИНГ ===
+                if action == "ping":
+                    ip = data.get("ip")
+                    timeout = data.get("timeout", CONFIG["ping_timeout_ms"])
+                    if ip:
+                        result = ping_device(ip, timeout)
+                        response = {"request_id": request_id, **result}
+                    else:
+                        response["error"] = "IP not provided"
+
+                # === СПИСОК КАРТ ===
+                elif action == "list_maps":
+                    try:
+                        files = [
+                            f for f in os.listdir(MAPS_DIR)
+                            if f.endswith(".json")
+                        ]
+                        response = {"request_id": request_id, "success": True, "files": files}
+                    except Exception as e:
+                        response["error"] = str(e)
+
+                # === ЧТЕНИЕ ФАЙЛА (универсально) ===
+                elif action == "file_get":
+                    path = data.get("path") or data.get("filename")
+                    if not path:
+                        response["error"] = "No path or filename"
+                    else:
+                        file_path = get_full_path(path)
+                        if os.path.exists(file_path) and file_path.endswith(".json"):
+                            try:
+                                with open(file_path, "r", encoding="utf-8") as f:
+                                    file_data = json.load(f)
+                                response = {"request_id": request_id, "success": True, "data": file_data}
+                            except Exception as e:
+                                response["error"] = f"Read error: {e}"
+                        else:
+                            response["error"] = "File not found or not JSON"
+
+                # === СОХРАНЕНИЕ ФАЙЛА (универсально) ===
+                elif action == "file_put":
+                    path = data.get("path") or data.get("filename")
+                    file_data = data.get("data")
+                    if not path or not isinstance(file_data, (dict, list)):
+                        response["error"] = "Invalid path or data"
+                    else:
+                        file_path = get_full_path(path)
+                        try:
+                            os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                            with open(file_path, "w", encoding="utf-8") as f:
+                                json.dump(file_data, f, ensure_ascii=False, indent=4)
+                            response = {"request_id": request_id, "success": True}
+                        except Exception as e:
+                            response["error"] = f"Write error: {e}"
+
+                # === АУТЕНТИФИКАЦИЯ ===
+                elif action == "auth_login":
+                    login = data.get("login")
+                    password_hash = data.get("password_hash")
+                    if not login or not password_hash:
+                        response["error"] = "Логин и пароль обязательны"
+                    else:
+                        users_path = os.path.join(OPERATORS_DIR, "users.json")
+                        if not os.path.exists(users_path):
+                            response["error"] = "Пользователи не найдены"
+                        else:
+                            try:
+                                with open(users_path, "r", encoding="utf-8") as f:
+                                    users = json.load(f)
+                                user = next((u for u in users if u.get("login") == login), None)
+                                if user and user.get("password") == password_hash:
+                                    # Убираем пароль из ответа
+                                    safe_user = {k: v for k, v in user.items() if k != "password"}
+                                    safe_user["last_activity"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                                    # Обновляем last_activity
+                                    for u in users:
+                                        if u["id"] == user["id"]:
+                                            u["last_activity"] = safe_user["last_activity"]
+                                    with open(users_path, "w", encoding="utf-8") as f:
+                                        json.dump(users, f, ensure_ascii=False, indent=4)
+                                    response = {"request_id": request_id, "success": True, "user": safe_user}
+                                else:
+                                    response["error"] = "Неверный логин или пароль"
+                            except Exception as e:
+                                response["error"] = f"Ошибка: {e}"
+                                
+                # === ОПЕРАТОРЫ ===               
+                elif action == "list_operators":
+                    users_path = os.path.join(OPERATORS_DIR, "users.json")
+                    if not os.path.exists(users_path):
+                        response["error"] = "Файл пользователей не найден"
+                    else:
+                        try:
+                            with open(users_path, "r", encoding="utf-8") as f:
+                                users = json.load(f)
+                            # не возвращаем пароли
+                            for u in users:
+                                u.pop("password", None)
+                            response = {"request_id": request_id, "success": True, "operators": users}
+                        except Exception as e:
+                            response["error"] = f"Ошибка чтения: {e}"
+
+                # === ОТПРАВКА ОТВЕТА ===
+                await websocket.send(json.dumps(response))
+
+            except json.JSONDecodeError:
+                await websocket.send(json.dumps({"error": "Invalid JSON", "request_id": data.get("request_id")}))
+            except Exception as e:
+                log(f"Handler error: {e}")
+                await websocket.send(json.dumps({"error": str(e), "request_id": data.get("request_id")}))
+    except websockets.ConnectionClosed:
+        log(f"Client disconnected: {client_ip}")
+    except Exception as e:
+        log(f"Connection error: {e}")
+
+# === ЗАПУСК СЕРВЕРА ===
+async def main():
+    host = "0.0.0.0"
+    port = 8081
+    log(f"WebSocket server STARTED → ws://{host}:{port}")
+    async with websockets.serve(handler, host, port):
+        await asyncio.Future()
+
+def run_server():
+    asyncio.run(main())
+
+if __name__ == "__main__":
+    run_server()

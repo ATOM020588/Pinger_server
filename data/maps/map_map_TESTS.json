@@ -1,6 +1,6 @@
 {
     "map": {
-        "name": "TESTS",
+        "name": "map_TESTS",
         "folder": "main",
         "age": "3",
         "last_adm": "unknown",
@@ -166,13 +166,13 @@
                 "x": 801.0,
                 "y": 363.0
             },
-            "ip": "1.1.1.1",
+            "ip": "192.168.0.1",
             "mac": "AB:CD:EF:GH:IJ",
             "master": "Негай В. В.",
             "model": "BDCOM P3600-08E",
             "power": "питание",
             "location": "локация",
-            "pingok": true,
+            "pingok": false,
             "ports": [
                 {
                     "id": "76",

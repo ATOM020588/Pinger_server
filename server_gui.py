@@ -104,7 +104,7 @@ class ServerThread(QThread):
 
     def run(self):
         self.process = subprocess.Popen(
-            ['python', 'server.py'],
+            ['python', 'server_ws.py'],
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
             text=True, bufsize=1
         )
@@ -360,3 +360,5 @@ if __name__ == '__main__':
     win = ServerGUI()
     win.show()
     sys.exit(app.exec())
+    
+    

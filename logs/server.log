@@ -1,0 +1,877 @@
+10:00:51 - "GET /file?path=models/models.json HTTP/1.1" 200 -
+10:14:06 - "GET /file?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+10:15:01 - "GET /file?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+10:15:21 - "POST /save?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+10:18:39 - "GET /file?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+10:18:51 - "POST /save?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+10:22:13 - "GET /file?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+10:22:19 - "GET /file?path=models/models.json HTTP/1.1" 200 -
+10:22:21 - "GET /file?path=lists/firmware.json HTTP/1.1" 200 -
+10:22:31 - "POST /save?path=lists/firmware.json HTTP/1.1" 200 -
+10:25:20 - "GET /file?path=models/models.json HTTP/1.1" 200 -
+10:25:22 - "GET /file?path=lists/firmware.json HTTP/1.1" 200 -
+10:25:29 - "POST /save?path=lists/firmware.json HTTP/1.1" 200 -
+11:02:58 - "GET /file?path=operators/groups.json HTTP/1.1" 200 -
+11:03:00 - "GET /file?path=operators/users.json HTTP/1.1" 200 -
+11:03:59 - "POST /save?path=operators/groups.json HTTP/1.1" 200 -
+11:04:01 - "GET /file?path=operators/groups.json HTTP/1.1" 200 -
+11:04:21 - "POST /save?path=operators/users.json HTTP/1.1" 200 -
+11:04:23 - "GET /file?path=operators/users.json HTTP/1.1" 200 -
+11:06:29 - "GET /file?path=lists/mngmtvlan.json HTTP/1.1" 200 -
+11:24:39 - "GET /ping?ip=8.8.8.8 HTTP/1.1" 200 -
+11:24:39 - code 404, message File not found
+11:24:39 - "GET /favicon.ico HTTP/1.1" 404 -
+11:28:42 - WebSocket сервер запущен: ws://0.0.0.0:8081
+11:29:01 - WebSocket сервер запущен: ws://0.0.0.0:8081
+11:48:46 - WebSocket сервер запущен: ws://0.0.0.0:8081
+11:50:31 - WebSocket server running on: ws://0.0.0.0:8081
+12:07:45 - WebSocket server running on: ws://0.0.0.0:8081
+12:44:24 - Client Connected: 127.0.0.1
+13:09:04 - WebSocket server running on: ws://0.0.0.0:8081
+13:11:21 - WebSocket server running on: ws://0.0.0.0:8081
+13:16:36 - WebSocket server STARTED → ws://0.0.0.0:8081
+13:17:49 - Client connected: 127.0.0.1
+13:17:49 - Action: list_maps | Client: 127.0.0.1
+13:17:49 - Action: file_get | Client: 127.0.0.1
+13:17:49 - Action: file_get | Client: 127.0.0.1
+13:17:49 - Action: file_get | Client: 127.0.0.1
+13:17:49 - Action: file_get | Client: 127.0.0.1
+13:17:49 - Action: file_get | Client: 127.0.0.1
+13:17:54 - Action: file_get | Client: 127.0.0.1
+13:18:09 - Action: file_put | Client: 127.0.0.1
+13:19:14 - Action: file_put | Client: 127.0.0.1
+13:20:26 - Client disconnected: 127.0.0.1
+13:20:30 - Client connected: 127.0.0.1
+13:21:02 - Client disconnected: 127.0.0.1
+13:21:07 - Client connected: 127.0.0.1
+13:28:54 - WebSocket server STARTED → ws://0.0.0.0:8081
+13:29:17 - Client connected: 127.0.0.1
+13:29:17 - Action: file_get | Path: operators/groups.json | Client: 127.0.0.1
+13:29:17 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+13:29:23 - Action: file_put | Path: operators/users.json | Client: 127.0.0.1
+13:29:23 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+13:29:23 - Action: file_put | Path: operators/users.json | Client: 127.0.0.1
+13:29:23 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+13:29:23 - Action: file_put | Path: operators/users.json | Client: 127.0.0.1
+13:29:23 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+13:29:24 - Action: file_put | Path: operators/users.json | Client: 127.0.0.1
+13:29:24 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+13:29:53 - Action: file_put | Path: operators/users.json | Client: 127.0.0.1
+13:29:53 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+13:58:01 - WebSocket server STARTED → ws://0.0.0.0:8081
+14:06:35 - Client connected: 127.0.0.1
+14:06:44 - Client disconnected: 127.0.0.1
+14:07:33 - Client connected: 127.0.0.1
+14:07:37 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:08:23 - Client disconnected: 127.0.0.1
+14:09:56 - WebSocket server STARTED → ws://0.0.0.0:8081
+14:10:15 - Client connected: 127.0.0.1
+14:10:21 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:10:24 - Client connected: 127.0.0.1
+14:10:31 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:10:31 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:10:31 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:10:31 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:10:31 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:10:31 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:10:43 - Client disconnected: 127.0.0.1
+14:10:43 - Client disconnected: 127.0.0.1
+14:10:47 - Client connected: 127.0.0.1
+14:10:50 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:11:41 - Client disconnected: 127.0.0.1
+14:14:07 - Client connected: 127.0.0.1
+14:14:11 - Client connected: 127.0.0.1
+14:14:15 - Client connected: 127.0.0.1
+14:14:19 - Client connected: 127.0.0.1
+14:14:23 - Client connected: 127.0.0.1
+14:14:27 - Client connected: 127.0.0.1
+14:14:31 - Client connected: 127.0.0.1
+14:14:35 - Client connected: 127.0.0.1
+14:14:39 - Client connected: 127.0.0.1
+14:14:43 - Client connected: 127.0.0.1
+14:14:46 - WebSocket server STARTED → ws://0.0.0.0:8081
+14:14:47 - Client connected: 127.0.0.1
+14:14:55 - Client connected: 127.0.0.1
+14:14:59 - Client connected: 127.0.0.1
+14:15:28 - Client connected: 127.0.0.1
+14:15:32 - Client connected: 127.0.0.1
+14:15:36 - Client connected: 127.0.0.1
+14:15:40 - Client connected: 127.0.0.1
+14:15:44 - Client connected: 127.0.0.1
+14:15:48 - Client connected: 127.0.0.1
+14:16:28 - Client connected: 127.0.0.1
+14:16:35 - Client connected: 127.0.0.1
+14:16:59 - Client connected: 127.0.0.1
+14:17:03 - Client connected: 127.0.0.1
+14:17:07 - Client connected: 127.0.0.1
+14:17:11 - Client connected: 127.0.0.1
+14:17:15 - Client connected: 127.0.0.1
+14:17:19 - Client connected: 127.0.0.1
+14:17:23 - Client connected: 127.0.0.1
+14:17:27 - Client connected: 127.0.0.1
+14:17:31 - Client connected: 127.0.0.1
+14:17:35 - Client connected: 127.0.0.1
+14:17:39 - Client connected: 127.0.0.1
+14:17:43 - Client connected: 127.0.0.1
+14:17:47 - Client connected: 127.0.0.1
+14:17:51 - Client connected: 127.0.0.1
+14:17:55 - Client connected: 127.0.0.1
+14:17:59 - Client connected: 127.0.0.1
+14:18:04 - Client connected: 127.0.0.1
+14:18:08 - Client connected: 127.0.0.1
+14:18:12 - Client connected: 127.0.0.1
+14:18:16 - Client connected: 127.0.0.1
+14:18:20 - Client connected: 127.0.0.1
+14:18:24 - Client connected: 127.0.0.1
+14:18:28 - Client connected: 127.0.0.1
+14:18:32 - Client connected: 127.0.0.1
+14:18:36 - Client connected: 127.0.0.1
+14:18:40 - Client connected: 127.0.0.1
+14:18:44 - Client connected: 127.0.0.1
+14:18:48 - Client connected: 127.0.0.1
+14:18:52 - Client connected: 127.0.0.1
+14:18:56 - Client connected: 127.0.0.1
+14:19:00 - Client connected: 127.0.0.1
+14:19:04 - Client connected: 127.0.0.1
+14:19:08 - Client connected: 127.0.0.1
+14:19:12 - Client connected: 127.0.0.1
+14:19:16 - Client connected: 127.0.0.1
+14:19:20 - Client connected: 127.0.0.1
+14:19:24 - Client connected: 127.0.0.1
+14:19:28 - Client connected: 127.0.0.1
+14:19:32 - Client connected: 127.0.0.1
+14:19:36 - Client connected: 127.0.0.1
+14:19:40 - Client connected: 127.0.0.1
+14:19:44 - Client connected: 127.0.0.1
+14:19:49 - Client connected: 127.0.0.1
+14:19:53 - Client connected: 127.0.0.1
+14:19:57 - Client connected: 127.0.0.1
+14:20:01 - Client connected: 127.0.0.1
+14:20:05 - Client connected: 127.0.0.1
+14:20:09 - Client connected: 127.0.0.1
+14:20:13 - Client connected: 127.0.0.1
+14:20:17 - Client connected: 127.0.0.1
+14:20:21 - Client connected: 127.0.0.1
+14:20:25 - Client connected: 127.0.0.1
+14:20:29 - Client connected: 127.0.0.1
+14:20:33 - Client connected: 127.0.0.1
+14:20:37 - Client connected: 127.0.0.1
+14:20:41 - Client connected: 127.0.0.1
+14:20:45 - Client connected: 127.0.0.1
+14:20:49 - Client connected: 127.0.0.1
+14:20:53 - Client connected: 127.0.0.1
+14:20:57 - Client connected: 127.0.0.1
+14:21:01 - Client connected: 127.0.0.1
+14:21:05 - Client connected: 127.0.0.1
+14:22:08 - Client connected: 127.0.0.1
+14:22:12 - Client connected: 127.0.0.1
+14:22:18 - WebSocket server STARTED → ws://0.0.0.0:8081
+14:22:22 - Client connected: 127.0.0.1
+14:22:26 - Client connected: 127.0.0.1
+14:22:30 - Client connected: 127.0.0.1
+14:22:34 - Client connected: 127.0.0.1
+14:22:38 - Client connected: 127.0.0.1
+14:22:49 - Client connected: 127.0.0.1
+14:22:53 - Client connected: 127.0.0.1
+14:22:57 - Client connected: 127.0.0.1
+14:23:01 - Client connected: 127.0.0.1
+14:23:05 - Client connected: 127.0.0.1
+14:23:09 - Client connected: 127.0.0.1
+14:23:13 - Client connected: 127.0.0.1
+14:23:17 - Client connected: 127.0.0.1
+14:23:21 - Client connected: 127.0.0.1
+14:23:25 - Client connected: 127.0.0.1
+14:23:29 - Client connected: 127.0.0.1
+14:24:33 - WebSocket server STARTED → ws://0.0.0.0:8081
+14:25:04 - Client connected: 127.0.0.1
+14:25:08 - Client connected: 127.0.0.1
+14:25:12 - Client connected: 127.0.0.1
+14:25:16 - Client connected: 127.0.0.1
+14:25:20 - Client connected: 127.0.0.1
+14:25:24 - Client connected: 127.0.0.1
+14:25:28 - Client connected: 127.0.0.1
+14:25:33 - Client connected: 127.0.0.1
+14:25:37 - Client connected: 127.0.0.1
+14:25:41 - Client connected: 127.0.0.1
+14:25:45 - Client connected: 127.0.0.1
+14:25:49 - Client connected: 127.0.0.1
+14:25:53 - Client connected: 127.0.0.1
+14:25:57 - Client connected: 127.0.0.1
+14:26:01 - Client connected: 127.0.0.1
+14:26:05 - Client connected: 127.0.0.1
+14:26:46 - Client connected: 127.0.0.1
+14:26:51 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:27:06 - Client connected: 127.0.0.1
+14:27:11 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:27:56 - Client disconnected: 127.0.0.1
+14:28:18 - Client connected: 127.0.0.1
+14:28:21 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:29:59 - Client connected: 127.0.0.1
+14:30:01 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:30:03 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:30:06 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:30:57 - Client connected: 127.0.0.1
+14:31:02 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:31:06 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:31:08 - Client connected: 127.0.0.1
+14:31:10 - Client disconnected: 127.0.0.1
+14:31:57 - Client connected: 127.0.0.1
+14:32:03 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:32:05 - Client connected: 127.0.0.1
+14:32:07 - Action: file_get | Path: operators/groups.json | Client: 127.0.0.1
+14:32:07 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+14:32:41 - Client disconnected: 127.0.0.1
+14:33:14 - Client connected: 127.0.0.1
+14:33:18 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:33:21 - Client connected: 127.0.0.1
+14:33:21 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:33:21 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:21 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:21 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:33:21 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:21 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:33:22 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:24 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:33:24 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:24 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:24 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:33:24 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:24 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:33:25 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:28 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:33:28 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:28 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:28 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:33:28 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:28 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:33:30 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:33:32 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:33:32 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:32 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:32 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:33:32 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:32 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:33:40 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:33:40 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:40 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:40 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:33:40 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:40 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:33:44 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:47 - Action: file_put | Path: map_1.json | Client: 127.0.0.1
+14:33:49 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:33:49 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:33:49 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:33:49 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:33:49 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:33:49 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:35:00 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+14:35:00 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:35:01 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+14:35:01 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+14:35:02 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+14:40:47 - Client disconnected: 127.0.0.1
+14:40:47 - Client disconnected: 127.0.0.1
+14:40:49 - Client connected: 127.0.0.1
+14:41:08 - Client connected: 127.0.0.1
+14:41:58 - Client disconnected: 127.0.0.1
+14:42:00 - Client connected: 127.0.0.1
+14:42:11 - Client disconnected: 127.0.0.1
+14:42:13 - Client connected: 127.0.0.1
+14:42:48 - Client connected: 127.0.0.1
+14:43:42 - Client disconnected: 127.0.0.1
+14:44:11 - Client connected: 127.0.0.1
+14:45:53 - Client connected: 127.0.0.1
+14:46:16 - Client connected: 127.0.0.1
+14:46:30 - Client connected: 127.0.0.1
+14:46:55 - Client disconnected: 127.0.0.1
+14:46:57 - Client connected: 127.0.0.1
+14:47:59 - Client connected: 127.0.0.1
+14:48:04 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:48:06 - Client connected: 127.0.0.1
+14:48:08 - Client disconnected: 127.0.0.1
+14:59:12 - Client connected: 127.0.0.1
+14:59:16 - Action: auth_login | Path:  | Client: 127.0.0.1
+14:59:19 - Client connected: 127.0.0.1
+14:59:19 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+14:59:19 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+14:59:23 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+14:59:23 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+14:59:29 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+14:59:29 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+14:59:34 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+14:59:34 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+14:59:37 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+14:59:38 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+14:59:44 - Action: list_maps | Path:  | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+14:59:44 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+14:59:56 - Client disconnected: 127.0.0.1
+14:59:56 - Client disconnected: 127.0.0.1
+15:00:58 - Client connected: 127.0.0.1
+15:01:02 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:01:05 - Client connected: 127.0.0.1
+15:01:05 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:01:05 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:01:25 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:01:25 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:01:39 - Client disconnected: 127.0.0.1
+15:01:39 - Client disconnected: 127.0.0.1
+15:02:55 - Client connected: 127.0.0.1
+15:02:59 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:03:01 - Client connected: 127.0.0.1
+15:03:01 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:03:01 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:03:04 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:03:04 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:03:07 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:03:08 - Client disconnected: 127.0.0.1
+15:03:11 - Client connected: 127.0.0.1
+15:03:14 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:03:17 - Client connected: 127.0.0.1
+15:03:17 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:03:18 - Client disconnected: 127.0.0.1
+15:08:53 - Client connected: 127.0.0.1
+15:08:57 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:09:00 - Client connected: 127.0.0.1
+15:09:00 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:09:00 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:09:02 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:09:02 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:09:06 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:09:07 - Client disconnected: 127.0.0.1
+15:09:10 - Client connected: 127.0.0.1
+15:09:13 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:09:15 - Client connected: 127.0.0.1
+15:09:16 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:09:17 - Client disconnected: 127.0.0.1
+15:09:43 - Client connected: 127.0.0.1
+15:09:47 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:09:49 - Client connected: 127.0.0.1
+15:09:50 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:09:50 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:09:55 - Client disconnected: 127.0.0.1
+15:09:55 - Client disconnected: 127.0.0.1
+15:10:42 - Client connected: 127.0.0.1
+15:10:46 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:10:48 - Client connected: 127.0.0.1
+15:10:48 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:10:48 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:10:52 - Client disconnected: 127.0.0.1
+15:10:52 - Client disconnected: 127.0.0.1
+15:20:46 - Client connected: 127.0.0.1
+15:20:50 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:20:52 - Client connected: 127.0.0.1
+15:20:53 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:20:53 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:21:05 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:21:05 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:21:09 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:21:10 - Client disconnected: 127.0.0.1
+15:21:13 - Client connected: 127.0.0.1
+15:21:16 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:21:18 - Client connected: 127.0.0.1
+15:21:19 - Client disconnected: 127.0.0.1
+15:21:34 - Client connected: 127.0.0.1
+15:21:38 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:21:40 - Client connected: 127.0.0.1
+15:21:40 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:21:40 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:21:44 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:21:44 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:21:50 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:21:51 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:26:23 - Client disconnected: 127.0.0.1
+15:26:23 - Client disconnected: 127.0.0.1
+15:26:25 - Client connected: 127.0.0.1
+15:26:31 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:26:33 - Client connected: 127.0.0.1
+15:26:33 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:26:33 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:26:38 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:26:38 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:26:42 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:26:42 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:27:33 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:27:33 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:28:21 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:28:22 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:28:22 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:28:31 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:37:08 - Client disconnected: 127.0.0.1
+15:37:08 - Client disconnected: 127.0.0.1
+15:37:10 - Client connected: 127.0.0.1
+15:37:14 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:37:16 - Client connected: 127.0.0.1
+15:37:16 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:37:16 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:37:20 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:37:20 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:37:24 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:37:24 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:37:34 - Client disconnected: 127.0.0.1
+15:37:34 - Client disconnected: 127.0.0.1
+15:38:36 - Client connected: 127.0.0.1
+15:38:40 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:38:42 - Client connected: 127.0.0.1
+15:38:42 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:38:42 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:38:45 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:38:45 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:38:48 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:38:48 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:39:01 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:39:02 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:39:02 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:39:06 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:39:06 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:39:09 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:39:09 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:39:14 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:39:14 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:39:15 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:39:16 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:43:18 - Client disconnected: 127.0.0.1
+15:43:18 - Client disconnected: 127.0.0.1
+15:43:20 - Client connected: 127.0.0.1
+15:43:26 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:43:29 - Client connected: 127.0.0.1
+15:43:29 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:43:29 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:43:34 - Client disconnected: 127.0.0.1
+15:43:34 - Client disconnected: 127.0.0.1
+15:49:16 - Client connected: 127.0.0.1
+15:49:26 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:49:28 - Client connected: 127.0.0.1
+15:49:28 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:49:28 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:49:31 - Client disconnected: 127.0.0.1
+15:49:31 - Client disconnected: 127.0.0.1
+15:51:33 - Client connected: 127.0.0.1
+15:51:37 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:51:39 - Client connected: 127.0.0.1
+15:51:40 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:51:40 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:53:43 - Client disconnected: 127.0.0.1
+15:53:43 - Client disconnected: 127.0.0.1
+15:53:45 - Client connected: 127.0.0.1
+15:53:48 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:53:51 - Client connected: 127.0.0.1
+15:53:51 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:53:51 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:53:59 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:53:59 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:54:09 - Action: file_get | Path: operators/groups.json | Client: 127.0.0.1
+15:54:09 - Action: file_get | Path: operators/users.json | Client: 127.0.0.1
+15:57:16 - Client disconnected: 127.0.0.1
+15:57:16 - Client disconnected: 127.0.0.1
+15:57:18 - Client connected: 127.0.0.1
+15:57:22 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:57:24 - Client connected: 127.0.0.1
+15:57:24 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:57:24 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:57:28 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:57:28 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+15:57:31 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+15:57:39 - Client disconnected: 127.0.0.1
+15:57:39 - Client disconnected: 127.0.0.1
+15:58:05 - Client connected: 127.0.0.1
+15:58:08 - Action: auth_login | Path:  | Client: 127.0.0.1
+15:58:10 - Client connected: 127.0.0.1
+15:58:10 - Action: list_maps | Path:  | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+15:58:10 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:02:46 - Client disconnected: 127.0.0.1
+16:02:46 - Client disconnected: 127.0.0.1
+16:02:48 - Client connected: 127.0.0.1
+16:02:54 - Action: auth_login | Path:  | Client: 127.0.0.1
+16:02:57 - Client connected: 127.0.0.1
+16:02:57 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:02:57 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:02:59 - Client disconnected: 127.0.0.1
+16:02:59 - Client disconnected: 127.0.0.1
+16:03:56 - Client connected: 127.0.0.1
+16:04:00 - Action: auth_login | Path:  | Client: 127.0.0.1
+16:04:03 - Client connected: 127.0.0.1
+16:04:03 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:04:03 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:07:21 - Client disconnected: 127.0.0.1
+16:07:21 - Client disconnected: 127.0.0.1
+16:07:23 - Client connected: 127.0.0.1
+16:07:27 - Action: auth_login | Path:  | Client: 127.0.0.1
+16:07:29 - Client connected: 127.0.0.1
+16:07:30 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:07:30 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:07:42 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:07:42 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:07:54 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+16:07:55 - Client disconnected: 127.0.0.1
+16:10:11 - Client connected: 127.0.0.1
+16:10:17 - Action: auth_login | Path:  | Client: 127.0.0.1
+16:10:20 - Action: auth_login | Path:  | Client: 127.0.0.1
+16:10:22 - Client connected: 127.0.0.1
+16:10:23 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:10:23 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:11:01 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+16:11:02 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:11:02 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:11:06 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+16:11:50 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_1.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_123.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_zal.json | Client: 127.0.0.1
+16:11:50 - Action: file_get | Path: map_zalupa.json | Client: 127.0.0.1
+16:13:51 - Client disconnected: 127.0.0.1
+16:13:51 - Client disconnected: 127.0.0.1
+16:13:53 - Client connected: 127.0.0.1
+16:13:58 - Action: auth_login | Path:  | Client: 127.0.0.1
+16:14:00 - Client connected: 127.0.0.1
+16:14:01 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:14:01 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:14:01 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:14:01 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:14:01 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:14:01 - Action: file_get | Path: map_tests_worked.json | Client: 127.0.0.1
+16:14:08 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+16:14:10 - Action: list_maps | Path:  | Client: 127.0.0.1
+16:14:10 - Action: file_get | Path: map_01_Карта.json | Client: 127.0.0.1
+16:14:10 - Action: file_get | Path: map_map_TESTS.json | Client: 127.0.0.1
+16:14:10 - Action: file_get | Path: map_test.json | Client: 127.0.0.1
+16:14:10 - Action: file_get | Path: map_TESTS.json | Client: 127.0.0.1
+16:14:10 - Action: file_get | Path: map_tests_worked.json | Client: 127.0.0.1
+16:14:14 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+16:24:05 - Action: save_open_maps | Path:  | Client: 127.0.0.1
+16:24:06 - Client disconnected: 127.0.0.1
+17:16:58 - Client connected: 127.0.0.1
+17:17:03 - Action: auth_login | Path:  | Client: 127.0.0.1
+17:17:03 - Client disconnected: 127.0.0.1
+17:22:50 - Client connected: 127.0.0.1
+17:22:52 - Client connected: 127.0.0.1
+17:22:54 - Client connected: 127.0.0.1
+17:22:56 - Client connected: 127.0.0.1
+17:22:58 - Client connected: 127.0.0.1
+17:23:00 - Client connected: 127.0.0.1

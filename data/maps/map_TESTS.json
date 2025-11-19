@@ -1,13 +1,13 @@
 {
     "map": {
-        "name": "map_TESTS",
+        "name": "TESTS",
         "folder": "main",
         "age": "3",
         "last_adm": "berserk",
-        "mod_time": "2025-11-19 10:58:39",
+        "mod_time": "2025-11-12 15:25:35",
         "def_vlan": "-1",
-        "width": "1800",
-        "height": "900",
+        "width": "1900",
+        "height": "1000",
         "modifing": "none"
     },
     "switches": [
@@ -793,24 +793,14 @@
             },
             "model": "DES-3200-28 rev C",
             "note": ""
-        },
-        {
-            "id": 5,
-            "name": "tetetete",
-            "xy": {
-                "x": 1361.0,
-                "y": 218.0
-            },
-            "model": "DES-3200-28 rev C",
-            "note": ""
         }
     ],
     "users": [
         {
             "id": "{0D6A252A-0E1F-4CE1-A041-7447DD457C0B}",
             "xy": {
-                "x": 1198.0,
-                "y": 283.0
+                "x": 1215.0,
+                "y": 189.0
             },
             "name": "%Address",
             "ip": "192.168.0.5",

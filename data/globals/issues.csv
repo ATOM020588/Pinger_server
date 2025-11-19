@@ -1,1 +1,2 @@
-id,date,description,tickets,master,executor,created,transferred,callback,work_start,call_history,device_type,device_id,device_name,device_ip
+id,date,description,tickets,master,executor,created,transferred,callback,work_start,call_history,reaction_time,severity_type,device_type,device_id,device_name,device_ip
+1,2025-11-19 13:19:33,8.8.8.8 (TEST_SWITCH_DLINK) down,,Другой,,2025-11-19 13:20:03,,,,,60,Информация,switch,{79D61CC6-01C8-4023-8DCE-01AFAE470A37},TEST_SWITCH_DLINK,8.8.8.8

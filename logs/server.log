@@ -875,3 +875,802 @@
 17:22:56 - Client connected: 127.0.0.1
 17:22:58 - Client connected: 127.0.0.1
 17:23:00 - Client connected: 127.0.0.1
+17:28:58 - WebSocket server STARTED → ws://0.0.0.0:8081
+17:29:06 - Client connected: 192.168.0.56
+17:29:07 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:29:07 - Client connected: 192.168.0.56
+17:29:12 - Action: list_mngmt_vlan | Path:  | Client: 192.168.0.56
+17:30:12 - Client connected: 127.0.0.1
+17:30:12 - Action: list_operators | Path:  | Client: 127.0.0.1
+17:30:31 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:30:34 - Action: list_masters | Path:  | Client: 192.168.0.56
+17:30:34 - Action: list_engineers | Path:  | Client: 192.168.0.56
+17:30:39 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:30:39 - Action: list_models | Path:  | Client: 192.168.0.56
+17:30:42 - Action: load_model | Path:  | Client: 192.168.0.56
+17:30:43 - Action: download_image | Path: model_DES-3200-10_rev_C.jpg | Client: 192.168.0.56
+17:30:48 - Client disconnected: 192.168.0.56
+17:30:48 - Client disconnected: 192.168.0.56
+17:33:22 - Client connected: 192.168.0.56
+17:33:23 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:33:23 - Client connected: 192.168.0.56
+17:33:27 - Client disconnected: 192.168.0.56
+17:33:27 - Client disconnected: 192.168.0.56
+17:36:29 - Client connected: 192.168.0.56
+17:36:30 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:36:30 - Client connected: 192.168.0.56
+17:36:33 - Action: list_mngmt_vlan | Path:  | Client: 192.168.0.56
+17:36:44 - Action: save_mngmt_vlan | Path:  | Client: 192.168.0.56
+17:36:50 - Action: save_mngmt_vlan | Path:  | Client: 192.168.0.56
+17:37:05 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:37:14 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:37:18 - Action: list_masters | Path:  | Client: 192.168.0.56
+17:37:18 - Action: list_engineers | Path:  | Client: 192.168.0.56
+17:37:23 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:37:42 - Client disconnected: 192.168.0.56
+17:37:42 - Client disconnected: 192.168.0.56
+17:37:44 - Client connected: 192.168.0.56
+17:37:45 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:37:45 - Client connected: 192.168.0.56
+17:37:47 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:37:51 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:37:51 - Action: list_models | Path:  | Client: 192.168.0.56
+17:41:17 - Client disconnected: 192.168.0.56
+17:41:17 - Client disconnected: 192.168.0.56
+17:41:20 - Client connected: 192.168.0.56
+17:41:22 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:41:22 - Client connected: 192.168.0.56
+17:41:25 - Action: list_models | Path:  | Client: 192.168.0.56
+17:41:25 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:41:25 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+17:41:41 - Action: csv_read | Path: globals/issues.csv | Client: 192.168.0.56
+17:41:45 - Action: file_get | Path: lists/engineers.json | Client: 192.168.0.56
+17:41:46 - Client disconnected: 192.168.0.56
+17:41:46 - Client disconnected: 192.168.0.56
+17:44:16 - Client connected: 192.168.0.56
+17:44:17 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:44:17 - Client connected: 192.168.0.56
+17:44:19 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:44:21 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:44:25 - Client disconnected: 192.168.0.56
+17:44:25 - Client disconnected: 192.168.0.56
+17:46:13 - Client connected: 192.168.0.56
+17:46:14 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:46:14 - Client connected: 192.168.0.56
+17:46:20 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:46:21 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:46:25 - Client disconnected: 192.168.0.56
+17:46:25 - Client disconnected: 192.168.0.56
+17:47:23 - Client connected: 192.168.0.56
+17:47:24 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:47:24 - Client connected: 192.168.0.56
+17:47:27 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:47:29 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:47:33 - Action: download_image | Path: model_DES-3200-28_rev_C.png | Client: 192.168.0.56
+17:47:33 - Action: download_image | Path: model_DES-3200-28_rev_C.jpg | Client: 192.168.0.56
+17:47:36 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:47:48 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:48:00 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:48:12 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:48:24 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:48:36 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:48:48 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:49:00 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:49:12 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:49:24 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:49:36 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:49:48 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:50:00 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:50:12 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:50:16 - Client disconnected: 192.168.0.56
+17:50:16 - Client disconnected: 192.168.0.56
+17:50:18 - Client connected: 192.168.0.56
+17:50:19 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:50:19 - Client connected: 192.168.0.56
+17:50:23 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:50:25 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:50:30 - Client disconnected: 192.168.0.56
+17:50:30 - Client disconnected: 192.168.0.56
+17:52:01 - Client connected: 192.168.0.56
+17:52:02 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:52:02 - Client connected: 192.168.0.56
+17:52:06 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:52:08 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:52:11 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+17:52:11 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+17:52:12 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+17:52:13 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+17:52:14 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+17:52:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:52:18 - Action: ping | Path:  | Client: 192.168.0.56
+17:52:20 - Client disconnected: 192.168.0.56
+17:52:20 - Client disconnected: 192.168.0.56
+17:52:32 - Client connected: 192.168.0.56
+17:52:33 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:52:33 - Client connected: 192.168.0.56
+17:52:35 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:52:38 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:52:42 - Action: download_image | Path: model_bdcomp3600-08e.png | Client: 192.168.0.56
+17:52:42 - Action: download_image | Path: model_bdcomp3600-08e.jpg | Client: 192.168.0.56
+17:52:43 - Action: download_image | Path: model_bdcomp3600-08e.jpeg | Client: 192.168.0.56
+17:52:44 - Action: download_image | Path: model_bdcomp3600-08e.bmp | Client: 192.168.0.56
+17:52:45 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:52:45 - Action: download_image | Path: model_bdcomp3600-08e.gif | Client: 192.168.0.56
+17:52:49 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+17:52:50 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+17:52:51 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+17:52:52 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+17:52:53 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+17:52:57 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:53:00 - Action: download_image | Path: model_mes-2324fb.png | Client: 192.168.0.56
+17:53:00 - Action: download_image | Path: model_mes-2324fb.jpg | Client: 192.168.0.56
+17:53:01 - Action: download_image | Path: model_mes-2324fb.jpeg | Client: 192.168.0.56
+17:53:02 - Action: download_image | Path: model_mes-2324fb.bmp | Client: 192.168.0.56
+17:53:03 - Action: download_image | Path: model_mes-2324fb.gif | Client: 192.168.0.56
+17:53:09 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+17:53:09 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:53:09 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+17:53:11 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+17:53:12 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+17:53:13 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+17:53:19 - Action: ping | Path:  | Client: 192.168.0.56
+17:53:20 - Client disconnected: 192.168.0.56
+17:53:20 - Client disconnected: 192.168.0.56
+17:58:20 - Client connected: 192.168.0.56
+17:58:22 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:58:22 - Client connected: 192.168.0.56
+17:58:29 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:58:31 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+17:58:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:58:34 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+17:58:35 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+17:58:36 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+17:58:37 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+17:58:38 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+17:58:40 - Action: ping | Path:  | Client: 192.168.0.56
+17:58:41 - Client disconnected: 192.168.0.56
+17:58:41 - Client disconnected: 192.168.0.56
+17:59:28 - Client connected: 192.168.0.56
+17:59:32 - Action: auth_login | Path:  | Client: 192.168.0.56
+17:59:32 - Client connected: 192.168.0.56
+17:59:44 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+17:59:54 - Action: list_maps | Path:  | Client: 192.168.0.56
+17:59:57 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+18:00:00 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+18:00:00 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+18:00:01 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+18:00:02 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+18:00:03 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+18:00:05 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:08 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:00:09 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:12 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:20 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:00:32 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:00:44 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:00:44 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+18:00:45 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+18:00:46 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+18:00:47 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+18:00:48 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+18:00:52 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:53 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:54 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:55 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:55 - Action: ping | Path:  | Client: 192.168.0.56
+18:00:56 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:01:03 - Action: ping | Path:  | Client: 192.168.0.56
+18:01:04 - Action: ping | Path:  | Client: 192.168.0.56
+18:01:08 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:01:12 - Client disconnected: 192.168.0.56
+18:01:12 - Client disconnected: 192.168.0.56
+18:01:24 - Client connected: 192.168.0.56
+18:01:26 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:01:26 - Client connected: 192.168.0.56
+18:01:31 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:01:33 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+18:01:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:01:38 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+18:01:39 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+18:01:40 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+18:01:41 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+18:01:42 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+18:01:42 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+18:01:43 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+18:01:45 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+18:01:46 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+18:01:46 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+18:01:47 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+18:01:48 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+18:01:49 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+18:01:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:01:51 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+18:01:53 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+18:02:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:02:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:02:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:02:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:02:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:03:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:03:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:03:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:03:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:03:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:04:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:04:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:04:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:04:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:04:45 - Client connected: 127.0.0.1
+18:04:45 - Action: list_operators | Path:  | Client: 127.0.0.1
+18:04:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:05:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:05:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:05:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:05:33 - Action: list_models | Path:  | Client: 192.168.0.56
+18:05:33 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+18:05:33 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+18:05:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:05:41 - Action: list_masters | Path:  | Client: 192.168.0.56
+18:05:41 - Action: list_engineers | Path:  | Client: 192.168.0.56
+18:05:46 - Client connected: 127.0.0.1
+18:05:46 - Action: list_operators | Path:  | Client: 127.0.0.1
+18:05:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:06:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:06:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:06:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:06:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:06:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:07:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:07:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:07:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:07:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:07:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:08:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:08:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:08:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:08:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:08:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:09:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:09:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:09:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:09:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:09:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:10:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:10:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:10:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:10:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:10:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:11:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:11:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:11:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:11:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:11:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:11:55 - Client disconnected: 192.168.0.56
+18:11:55 - Client disconnected: 192.168.0.56
+18:11:57 - Client connected: 192.168.0.56
+18:11:59 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:11:59 - Client connected: 192.168.0.56
+18:12:11 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:12:23 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:12:35 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:12:47 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:12:59 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:13:11 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:13:23 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:13:35 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:13:47 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:13:59 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:14:01 - Client disconnected: 192.168.0.56
+18:14:01 - Client disconnected: 192.168.0.56
+18:15:08 - Client connected: 192.168.0.56
+18:15:09 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:15:09 - Client connected: 192.168.0.56
+18:15:12 - Client disconnected: 192.168.0.56
+18:15:12 - Client disconnected: 192.168.0.56
+18:16:43 - Client connected: 192.168.0.56
+18:16:43 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:16:43 - Client connected: 192.168.0.56
+18:16:45 - Action: list_groups | Path:  | Client: 192.168.0.56
+18:16:45 - Action: list_operators | Path:  | Client: 192.168.0.56
+18:16:46 - Client disconnected: 192.168.0.56
+18:16:46 - Client disconnected: 192.168.0.56
+18:18:44 - Client connected: 192.168.0.56
+18:18:46 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:18:46 - Client connected: 192.168.0.56
+18:18:48 - Action: list_groups | Path:  | Client: 192.168.0.56
+18:18:48 - Action: list_operators | Path:  | Client: 192.168.0.56
+18:18:59 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:19:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:19:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:19:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:19:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:19:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:20:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:20:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:20:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:20:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:20:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:21:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:21:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:21:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:21:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:21:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:22:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:22:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:22:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:22:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:22:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:23:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:23:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:23:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:23:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:23:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:24:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:24:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:24:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:24:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:24:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:25:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:25:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:25:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:25:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:25:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:26:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:26:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:26:23 - Client disconnected: 192.168.0.56
+18:26:23 - Client disconnected: 192.168.0.56
+18:26:25 - Client connected: 192.168.0.56
+18:26:26 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:26:27 - Client connected: 192.168.0.56
+18:26:28 - Action: list_groups | Path:  | Client: 192.168.0.56
+18:26:28 - Action: list_operators | Path:  | Client: 192.168.0.56
+18:26:39 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:26:42 - Client disconnected: 192.168.0.56
+18:26:42 - Client disconnected: 192.168.0.56
+18:26:58 - Client connected: 192.168.0.56
+18:26:59 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:26:59 - Client connected: 192.168.0.56
+18:27:01 - Client connected: 127.0.0.1
+18:27:01 - Action: list_operators | Path:  | Client: 127.0.0.1
+18:27:11 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:27:23 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:27:23 - Client disconnected: 192.168.0.56
+18:27:23 - Client disconnected: 192.168.0.56
+18:27:25 - Client connected: 192.168.0.56
+18:27:26 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:27:26 - Client connected: 192.168.0.56
+18:27:28 - Action: list_groups | Path:  | Client: 192.168.0.56
+18:27:28 - Action: list_operators | Path:  | Client: 192.168.0.56
+18:27:35 - Client disconnected: 192.168.0.56
+18:27:35 - Client disconnected: 192.168.0.56
+18:31:03 - WebSocket server STARTED → ws://0.0.0.0:8081
+18:33:39 - Client connected: 192.168.0.56
+18:33:40 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:33:40 - Client connected: 192.168.0.56
+18:33:42 - Action: file_get | Path: operators/groups.json | Client: 192.168.0.56
+18:33:42 - Action: file_get | Path: operators/users.json | Client: 192.168.0.56
+18:33:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:34:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:34:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:34:24 - Action: list_models | Path:  | Client: 192.168.0.56
+18:34:24 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+18:34:24 - Action: list_firmwares | Path:  | Client: 192.168.0.56
+18:34:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:34:30 - Action: file_get | Path: operators/groups.json | Client: 192.168.0.56
+18:34:30 - Action: file_get | Path: operators/users.json | Client: 192.168.0.56
+18:34:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:34:44 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:34:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:35:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:35:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:35:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:35:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:35:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:36:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:36:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:36:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:36:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:36:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:37:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:37:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:37:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:37:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:37:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:38:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:38:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:38:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:38:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:38:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:39:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:39:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:39:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:39:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:39:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:40:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:40:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:40:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:40:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:40:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:41:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:41:16 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:41:28 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:41:40 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:41:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:42:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:42:13 - Client disconnected: 192.168.0.56
+18:42:13 - Client disconnected: 192.168.0.56
+18:42:15 - Client connected: 192.168.0.56
+18:42:16 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:42:17 - Client connected: 192.168.0.56
+18:42:18 - Action: list_groups | Path:  | Client: 192.168.0.56
+18:42:18 - Action: list_operators | Path:  | Client: 192.168.0.56
+18:42:29 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:42:35 - Client disconnected: 192.168.0.56
+18:42:35 - Client disconnected: 192.168.0.56
+18:42:39 - Client connected: 192.168.0.56
+18:42:40 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:42:40 - Client connected: 192.168.0.56
+18:42:43 - Action: list_groups | Path:  | Client: 192.168.0.56
+18:42:43 - Action: list_operators | Path:  | Client: 192.168.0.56
+18:42:52 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:43:04 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:43:15 - Client disconnected: 192.168.0.56
+18:43:15 - Client disconnected: 192.168.0.56
+18:43:17 - Client connected: 192.168.0.56
+18:43:18 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:43:18 - Client connected: 192.168.0.56
+18:43:20 - Action: file_get | Path: operators/groups.json | Client: 192.168.0.56
+18:43:20 - Action: file_get | Path: operators/users.json | Client: 192.168.0.56
+18:43:25 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:43:30 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:43:42 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:43:54 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:44:06 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:44:18 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:44:30 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:44:42 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:44:54 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:45:06 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:45:18 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:45:30 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:45:42 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:45:54 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:46:06 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:46:18 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:46:30 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:46:42 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:46:43 - Client disconnected: 192.168.0.56
+18:46:43 - Client disconnected: 192.168.0.56
+18:46:45 - Client connected: 192.168.0.56
+18:46:47 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:46:47 - Client connected: 192.168.0.56
+18:46:49 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:46:59 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:47:11 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:47:23 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:47:35 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:47:47 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:47:59 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:48:03 - Client disconnected: 192.168.0.56
+18:48:03 - Client disconnected: 192.168.0.56
+18:48:06 - Client connected: 192.168.0.56
+18:48:06 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:48:06 - Client connected: 192.168.0.56
+18:48:08 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:48:18 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:48:30 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:48:42 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:48:54 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:49:06 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:49:18 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:49:30 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:49:39 - Client disconnected: 192.168.0.56
+18:49:39 - Client disconnected: 192.168.0.56
+18:49:42 - Client connected: 192.168.0.56
+18:49:43 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:49:43 - Client connected: 192.168.0.56
+18:49:45 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:49:46 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_map_TESTS.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+18:49:47 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+18:49:55 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:50:07 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:50:19 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:50:31 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:50:43 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:50:55 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:51:07 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:51:19 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:51:31 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:51:43 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:51:55 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:52:07 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:52:19 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:52:31 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:52:43 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:52:55 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:53:07 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:53:13 - Client disconnected: 192.168.0.56
+18:53:13 - Client disconnected: 192.168.0.56
+18:54:35 - Client connected: 192.168.0.56
+18:54:36 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:54:36 - Client connected: 192.168.0.56
+18:54:39 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:54:39 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:54:40 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+18:54:40 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+18:54:40 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+18:54:40 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+18:54:40 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+18:54:40 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+18:54:41 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+18:54:41 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+18:54:48 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:55:00 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:55:12 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:55:24 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:55:36 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+18:55:40 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:55:40 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+18:55:41 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+18:55:59 - Client disconnected: 192.168.0.56
+18:55:59 - Client disconnected: 192.168.0.56
+18:56:03 - Client connected: 192.168.0.56
+18:56:04 - Action: auth_login | Path:  | Client: 192.168.0.56
+18:56:04 - Client connected: 192.168.0.56
+18:56:06 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:56:06 - Action: list_maps | Path:  | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+18:56:07 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:02:36 - Client disconnected: 192.168.0.56
+19:02:36 - Client disconnected: 192.168.0.56
+19:02:58 - Client connected: 192.168.0.56
+19:02:59 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:02:59 - Client connected: 192.168.0.56
+19:03:01 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:03:01 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+19:03:02 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:03:08 - Client disconnected: 192.168.0.56
+19:03:08 - Client disconnected: 192.168.0.56
+19:03:15 - Client connected: 192.168.0.56
+19:03:16 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:03:16 - Client connected: 192.168.0.56
+19:03:18 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:03:21 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:03:25 - Client disconnected: 192.168.0.56
+19:03:25 - Client disconnected: 192.168.0.56
+19:14:20 - Client connected: 192.168.0.56
+19:14:21 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:14:21 - Client connected: 192.168.0.56
+19:14:28 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+19:14:28 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:14:44 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:14:45 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:14:53 - Client disconnected: 192.168.0.56
+19:14:53 - Client disconnected: 192.168.0.56
+19:14:57 - Client connected: 192.168.0.56
+19:14:58 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:14:58 - Client connected: 192.168.0.56
+19:15:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:15:22 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+19:15:22 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:15:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:15:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:15:35 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:15:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:15:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:15:59 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+19:15:59 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:16:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:16:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:16:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:16:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:16:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:17:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:17:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:17:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:17:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:17:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:18:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:18:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:18:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:18:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:18:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:19:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:19:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:19:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:19:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:19:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:20:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:20:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:20:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:20:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:20:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:21:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:21:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:21:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:21:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:21:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:22:09 - Client disconnected: 192.168.0.56
+19:22:09 - Client disconnected: 192.168.0.56
+19:22:11 - Client connected: 192.168.0.56
+19:22:13 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:22:13 - Client connected: 192.168.0.56
+19:22:13 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:22:24 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:22:25 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+19:22:25 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:22:37 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:22:38 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:22:49 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:23:01 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:23:13 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:23:25 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:23:37 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:23:49 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:24:01 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:24:13 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:24:25 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:24:37 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:24:49 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:25:01 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:25:13 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:25:22 - Client disconnected: 192.168.0.56
+19:25:22 - Client disconnected: 192.168.0.56
+19:25:24 - Client connected: 192.168.0.56
+19:25:25 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:25:26 - Client connected: 192.168.0.56
+19:25:26 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:25:26 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:25:30 - Action: list_maps | Path:  | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_01_Карта.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_1.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_123.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_test.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_zal.json | Client: 192.168.0.56
+19:25:31 - Action: file_get | Path: maps/map_zalupa.json | Client: 192.168.0.56
+19:25:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:25:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:26:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:26:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:26:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:26:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:26:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:26:59 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+19:26:59 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+19:27:00 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+19:27:01 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+19:27:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:27:02 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+19:27:03 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+19:27:05 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+19:27:06 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+19:27:07 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+19:27:08 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+19:27:09 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+19:27:10 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+19:27:12 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+19:27:13 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+19:27:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:27:14 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+19:27:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:27:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:27:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:28:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:28:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:28:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:28:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:28:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:29:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:29:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:29:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:29:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:29:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:30:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:30:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:30:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:30:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:30:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:31:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:31:14 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:31:26 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:31:38 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:31:50 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:32:02 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:32:06 - Client disconnected: 192.168.0.56
+19:32:06 - Client disconnected: 192.168.0.56
+19:32:08 - Client connected: 192.168.0.56
+19:32:10 - Action: auth_login | Path:  | Client: 192.168.0.56
+19:32:10 - Client connected: 192.168.0.56
+19:32:10 - Action: file_get | Path: maps/map_tests_worked.json | Client: 192.168.0.56
+19:32:10 - Action: file_get | Path: maps/map_TESTS.json | Client: 192.168.0.56
+19:32:16 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+19:32:16 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+19:32:17 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+19:32:18 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+19:32:19 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+19:32:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:32:29 - Action: download_image | Path: model_des-3200-28revc.png | Client: 192.168.0.56
+19:32:30 - Action: download_image | Path: model_des-3200-28revc.jpg | Client: 192.168.0.56
+19:32:31 - Action: download_image | Path: model_des-3200-28revc.jpeg | Client: 192.168.0.56
+19:32:32 - Action: download_image | Path: model_des-3200-28revc.bmp | Client: 192.168.0.56
+19:32:33 - Action: download_image | Path: model_des-3200-28revc.gif | Client: 192.168.0.56
+19:32:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:32:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:32:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:33:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:33:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:33:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:33:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:33:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:34:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:34:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:34:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:34:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:34:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:35:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:35:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:35:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:35:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:35:58 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:36:10 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:36:22 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:36:34 - Action: check_ping_updates | Path:  | Client: 192.168.0.56
+19:36:46 - Action: check_ping_updates | Path:  | Client: 192.168.0.56

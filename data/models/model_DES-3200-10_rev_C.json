@@ -12,7 +12,7 @@
         "firmware": "con vlan vlan%MVLAN% add un 1\nconf filter dhcp ports 1 state disable\nconfig address_binding ip_mac ports 1 arp_inspection disable\nconf ipif System dhcp"
     },
     "syntax": {
-        "Общие": "main",
+        "Общие": "mains",
         "Hostname": "hostname",
         "IP": "%IP"
     },

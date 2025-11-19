@@ -6,6 +6,7 @@ import subprocess
 import csv
 from datetime import datetime
 import pickle
+import base64
 
 # === КОНФИГ ===
 CONFIG = {
@@ -21,24 +22,32 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 MAPS_DIR = os.path.join(DATA_DIR, "maps")
 OPERATORS_DIR = os.path.join(DATA_DIR, "operators")
 GLOBALS_DIR = os.path.join(DATA_DIR, "globals")
+LISTS_DIR = os.path.join(DATA_DIR, "lists")
+MODELS_DIR = os.path.join(DATA_DIR, "models")
+IMAGES_DIR = os.path.join(DATA_DIR, "images")
 
 os.makedirs(MAPS_DIR, exist_ok=True)
 os.makedirs(OPERATORS_DIR, exist_ok=True)
 os.makedirs(GLOBALS_DIR, exist_ok=True)
+os.makedirs(LISTS_DIR, exist_ok=True)
+os.makedirs(MODELS_DIR, exist_ok=True)
+os.makedirs(IMAGES_DIR, exist_ok=True)
 
 
 # === ЛОГИРОВАНИЕ ===
 def log(msg):
     line = f"{datetime.now().strftime('%H:%M:%S')} - {msg}"
     print(line)
-    log_path = os.path.join("../logs", "server.log")
+    log_path = os.path.join(BASE_DIR, "logs", "server.log")
     os.makedirs(os.path.dirname(log_path), exist_ok=True)
     with open(log_path, "a", encoding="utf-8") as f:
         f.write(line + "\n")
 
+
 # === ПИНГ УСТРОЙСТВА ===
 def ping_device(ip, timeout_ms):
     try:
+        # Windows-style ping by default (change if needed for Linux)
         cmd = ['ping', '-n', '1', '-w', str(timeout_ms), ip]
         output = subprocess.check_output(
             cmd, stderr=subprocess.STDOUT, timeout=timeout_ms/1000 + 2
@@ -47,13 +56,15 @@ def ping_device(ip, timeout_ms):
     except Exception:
         return {"success": False, "ip": ip}
 
+
 # === ПОЛНЫЙ ПУТЬ К ФАЙЛУ ===
 def get_full_path(path):
     """Безопасно строит путь внутри DATA_DIR"""
     full_path = os.path.normpath(os.path.join(DATA_DIR, path))
-    if not full_path.startswith(os.path.abspath(DATA_DIR)):
+    if not os.path.abspath(full_path).startswith(os.path.abspath(DATA_DIR)):
         raise ValueError("Invalid path: outside DATA_DIR")
     return full_path
+
 
 # === РАБОТА С CSV ===
 def read_csv(path):
@@ -61,7 +72,7 @@ def read_csv(path):
     full_path = get_full_path(path)
     if not os.path.exists(full_path):
         return []
-    
+
     try:
         with open(full_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
@@ -70,23 +81,24 @@ def read_csv(path):
         log(f"Error reading CSV {path}: {e}")
         return []
 
+
 def write_csv(path, data):
     """Записывает список словарей в CSV файл"""
     full_path = get_full_path(path)
-    
+
     # Создаем директорию если не существует
     os.makedirs(os.path.dirname(full_path), exist_ok=True)
-    
+
     if not data:
         # Если данных нет, создаем пустой файл с заголовками
-        fieldnames = ["id", "date", "description", "tickets", "master", "executor", 
-                     "created", "transferred", "callback", "work_start", "call_history",
-                     "device_type", "device_id", "device_name", "device_ip"]
+        fieldnames = ["id", "date", "description", "tickets", "master", "executor",
+                      "created", "transferred", "callback", "work_start", "call_history",
+                      "device_type", "device_id", "device_name", "device_ip"]
         with open(full_path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
         return True
-    
+
     try:
         fieldnames = list(data[0].keys())
         with open(full_path, 'w', newline='', encoding='utf-8') as f:
@@ -98,15 +110,25 @@ def write_csv(path, data):
         log(f"Error writing CSV {path}: {e}")
         return False
 
+
 # === ОБРАБОТЧИК КЛИЕНТА ===
 async def handler(websocket):
-    client_ip = websocket.remote_address[0]
+    client_ip = websocket.remote_address[0] if websocket.remote_address else "unknown"
     log(f"Client connected: {client_ip}")
 
     try:
         async for message in websocket:
+            # Prepare a default response in case something goes wrong before we set it
+            response = {"request_id": None, "success": False, "error": "Unknown action"}
+
             try:
-                data = json.loads(message)
+                try:
+                    data = json.loads(message)
+                except json.JSONDecodeError:
+                    # Cannot parse JSON — respond with generic error (no request_id available)
+                    await websocket.send(json.dumps({"request_id": None, "success": False, "error": "Invalid JSON"}, ensure_ascii=False))
+                    continue
+
                 action = data.get("action")
                 request_id = data.get("request_id")
                 response = {"request_id": request_id, "success": False, "error": "Unknown action"}
@@ -126,10 +148,7 @@ async def handler(websocket):
                 # === СПИСОК КАРТ ===
                 elif action == "list_maps":
                     try:
-                        files = [
-                            f for f in os.listdir(MAPS_DIR)
-                            if f.endswith(".json")
-                        ]
+                        files = [f for f in os.listdir(MAPS_DIR) if f.endswith(".json")]
                         response = {"request_id": request_id, "success": True, "files": files}
                     except Exception as e:
                         response["error"] = str(e)
@@ -140,16 +159,20 @@ async def handler(websocket):
                     if not path:
                         response["error"] = "No path or filename"
                     else:
-                        file_path = get_full_path(path)
-                        if os.path.exists(file_path) and file_path.endswith(".json"):
-                            try:
-                                with open(file_path, "r", encoding="utf-8") as f:
-                                    file_data = json.load(f)
-                                response = {"request_id": request_id, "success": True, "data": file_data}
-                            except Exception as e:
-                                response["error"] = f"Read error: {e}"
+                        try:
+                            file_path = get_full_path(path)
+                        except Exception as e:
+                            response["error"] = f"Invalid path: {e}"
                         else:
-                            response["error"] = "File not found or not JSON"
+                            if os.path.exists(file_path) and file_path.endswith(".json"):
+                                try:
+                                    with open(file_path, "r", encoding="utf-8") as f:
+                                        file_data = json.load(f)
+                                    response = {"request_id": request_id, "success": True, "data": file_data}
+                                except Exception as e:
+                                    response["error"] = f"Read error: {e}"
+                            else:
+                                response["error"] = "File not found or not JSON"
 
                 # === СОХРАНЕНИЕ ФАЙЛА (универсально) ===
                 elif action == "file_put":
@@ -158,14 +181,18 @@ async def handler(websocket):
                     if not path or not isinstance(file_data, (dict, list)):
                         response["error"] = "Invalid path or data"
                     else:
-                        file_path = get_full_path(path)
                         try:
-                            os.makedirs(os.path.dirname(file_path), exist_ok=True)
-                            with open(file_path, "w", encoding="utf-8") as f:
-                                json.dump(file_data, f, ensure_ascii=False, indent=4)
-                            response = {"request_id": request_id, "success": True}
+                            file_path = get_full_path(path)
                         except Exception as e:
-                            response["error"] = f"Write error: {e}"
+                            response["error"] = f"Invalid path: {e}"
+                        else:
+                            try:
+                                os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                                with open(file_path, "w", encoding="utf-8") as f:
+                                    json.dump(file_data, f, ensure_ascii=False, indent=4)
+                                response = {"request_id": request_id, "success": True}
+                            except Exception as e:
+                                response["error"] = f"Write error: {e}"
 
                 # === ЧТЕНИЕ CSV ===
                 elif action == "csv_read":
@@ -210,7 +237,7 @@ async def handler(websocket):
                                     safe_user["last_activity"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                                     # Обновляем last_activity
                                     for u in users:
-                                        if u["id"] == user["id"]:
+                                        if u.get("id") == user.get("id"):
                                             u["last_activity"] = safe_user["last_activity"]
                                     with open(users_path, "w", encoding="utf-8") as f:
                                         json.dump(users, f, ensure_ascii=False, indent=4)
@@ -219,8 +246,8 @@ async def handler(websocket):
                                     response["error"] = "Неверный логин или пароль"
                             except Exception as e:
                                 response["error"] = f"Ошибка: {e}"
-                                
-                # === ОПЕРАТОРЫ ===               
+
+                # === ОПЕРАТОРЫ ===
                 elif action == "list_operators":
                     users_path = os.path.join(OPERATORS_DIR, "users.json")
                     if not os.path.exists(users_path):
@@ -235,53 +262,235 @@ async def handler(websocket):
                             response = {"request_id": request_id, "success": True, "operators": users}
                         except Exception as e:
                             response["error"] = f"Ошибка чтения: {e}"
-                
-                # === ПРОВЕРКА ИЗМЕНЕНИЙ PINGOK НА КАРТЕ ===
-                elif action == "check_ping_updates":
-                    map_id = data.get("map_id")
-                    client_hashes = data.get("hashes", {})  # {index: hash(pingok), ...}
 
-                    if not map_id:
-                        response["error"] = "map_id required"
-                    else:
-                        file_path = get_full_path(f"maps/map_{map_id}.json")
-                        if not os.path.exists(file_path):
-                            response["error"] = "Map not found"
+                elif action == "save_operators":
+                    users = data.get("operators")
+                    users_path = os.path.join(OPERATORS_DIR, "users.json")
+                    try:
+                        with open(users_path, "w", encoding="utf-8") as f:
+                            json.dump(users, f, ensure_ascii=False, indent=4)
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка записи операторов: {e}"
+
+                # === ГРУППЫ ===
+                elif action == "list_groups":
+                    groups_path = os.path.join(OPERATORS_DIR, "groups.json")
+                    try:
+                        if os.path.exists(groups_path):
+                            with open(groups_path, "r", encoding="utf-8") as f:
+                                groups = json.load(f)
                         else:
-                            try:
-                                with open(file_path, "r", encoding="utf-8") as f:
-                                    current_map = json.load(f)
+                            groups = []
+                        response = {"request_id": request_id, "success": True, "groups": groups}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения групп: {e}"
 
-                                switches = current_map.get("switches", [])
-                                updates = []
+                elif action == "save_groups":
+                    groups = data.get("groups")
+                    groups_path = os.path.join(OPERATORS_DIR, "groups.json")
+                    try:
+                        with open(groups_path, "w", encoding="utf-8") as f:
+                            json.dump(groups, f, ensure_ascii=False, indent=4)
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка записи групп: {e}"
 
-                                for idx, switch in enumerate(switches):
-                                    current_pingok = switch.get("pingok", False)
-                                    # Приводим к строке для стабильного хеша
-                                    current_hash = str(current_pingok).lower()
+                # === ENGINEERS / MASTERS ===
+                elif action == "list_engineers":
+                    engineers_path = os.path.join(LISTS_DIR, "engineers.json")
+                    try:
+                        if os.path.exists(engineers_path):
+                            with open(engineers_path, "r", encoding="utf-8") as f:
+                                engineers = json.load(f)
+                        else:
+                            engineers = []
+                        response = {"request_id": request_id, "success": True, "engineers": engineers}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения инженеров: {e}"
 
-                                    client_hash = client_hashes.get(str(idx))
+                elif action == "save_engineers":
+                    engineers = data.get("engineers", [])
+                    engineers_path = os.path.join(LISTS_DIR, "engineers.json")
+                    try:
+                        with open(engineers_path, "w", encoding="utf-8") as f:
+                            json.dump(engineers, f, ensure_ascii=False, indent=4)
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка записи инженеров: {e}"
 
-                                    if client_hash != current_hash:
-                                        updates.append({
-                                            "index": idx,
-                                            "pingok": current_pingok
-                                        })
+                elif action == "list_masters":
+                    masters_path = os.path.join(LISTS_DIR, "masters.json")
+                    try:
+                        if os.path.exists(masters_path):
+                            with open(masters_path, "r", encoding="utf-8") as f:
+                                masters = json.load(f)
+                        else:
+                            masters = []
+                        response = {"request_id": request_id, "success": True, "masters": masters}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения мастеров: {e}"
 
-                                response = {
-                                    "request_id": request_id,
-                                    "success": True,
-                                    "updates": updates,
-                                    "count": len(updates)
-                                }
+                elif action == "save_masters":
+                    masters = data.get("masters", [])
+                    masters_path = os.path.join(LISTS_DIR, "masters.json")
+                    try:
+                        with open(masters_path, "w", encoding="utf-8") as f:
+                            json.dump(masters, f, ensure_ascii=False, indent=4)
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка записи мастеров: {e}"
 
-                                if updates:
-                                    log(f"Ping updates sent for map {map_id}: {len(updates)} changes")
+                # === ПРОШИВКИ ===
+                elif action == "list_firmwares":
+                    fw_path = os.path.join(LISTS_DIR, "firmware.json")
+                    try:
+                        if os.path.exists(fw_path):
+                            with open(fw_path, "r", encoding="utf-8") as f:
+                                firmwares = json.load(f)
+                        else:
+                            firmwares = []
+                        response = {"request_id": request_id, "success": True, "firmwares": firmwares}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения прошивок: {e}"
 
-                            except Exception as e:
-                                response["error"] = f"Read error: {e}"
-                                
-                # === МАССОВЫЙ ПИНГ УСТРОЙСТВ НА КАРТЕ ===
+                elif action == "save_firmwares":
+                    firmwares = data.get("firmwares", [])
+                    fw_path = os.path.join(LISTS_DIR, "firmware.json")
+                    try:
+                        with open(fw_path, "w", encoding="utf-8") as f:
+                            json.dump(firmwares, f, ensure_ascii=False, indent=4)
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка записи прошивок: {e}"
+
+                # === MODELS ===
+                elif action == "list_models":
+                    path = os.path.join(MODELS_DIR, "models.json")
+                    try:
+                        if os.path.exists(path):
+                            with open(path, "r", encoding="utf-8") as f:
+                                models = json.load(f)
+                        else:
+                            models = []
+                        response = {"request_id": request_id, "success": True, "models": models}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения models.json: {e}"
+
+                elif action == "load_model":
+                    model_id = data.get("id")
+                    path = os.path.join(MODELS_DIR, f"{model_id}.json")
+                    try:
+                        with open(path, "r", encoding="utf-8") as f:
+                            model_data = json.load(f)
+                        response = {"request_id": request_id, "success": True, "model": model_data}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения модели: {e}"
+
+                elif action == "save_model":
+                    model_id = data.get("id")
+                    model_data = data.get("model")
+                    path = os.path.join(MODELS_DIR, f"{model_id}.json")
+
+                    try:
+                        # Обновляем список моделей (models.json)
+                        models_list_path = os.path.join(MODELS_DIR, "models.json")
+                        models = []
+                        if os.path.exists(models_list_path):
+                            with open(models_list_path, "r", encoding="utf-8") as f:
+                                models = json.load(f)
+
+                        models = [m for m in models if m.get("id") != model_id]
+                        models.append({"id": model_id, "model_name": model_data.get("model_name", "")})
+
+                        with open(models_list_path, "w", encoding="utf-8") as f:
+                            json.dump(models, f, ensure_ascii=False, indent=4)
+
+                        # Сохраняем тело модели
+                        with open(path, "w", encoding="utf-8") as f:
+                            json.dump(model_data, f, ensure_ascii=False, indent=4)
+
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка сохранения модели: {e}"
+
+                elif action == "delete_model":
+                    model_id = data.get("id")
+                    models_list_path = os.path.join(MODELS_DIR, "models.json")
+                    model_file_path = os.path.join(MODELS_DIR, f"{model_id}.json")
+
+                    try:
+                        if os.path.exists(model_file_path):
+                            os.remove(model_file_path)
+
+                        if os.path.exists(models_list_path):
+                            with open(models_list_path, "r", encoding="utf-8") as f:
+                                models = json.load(f)
+                            models = [m for m in models if m.get("id") != model_id]
+                            with open(models_list_path, "w", encoding="utf-8") as f:
+                                json.dump(models, f, ensure_ascii=False, indent=4)
+
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка удаления модели: {e}"
+
+                # === IMAGES ===
+                elif action == "upload_image":
+                    filename = data.get("filename")
+                    base64_data = data.get("image")
+
+                    try:
+                        if not filename or not base64_data:
+                            raise ValueError("filename or image missing")
+
+                        image_bytes = base64.b64decode(base64_data)
+                        image_path = os.path.join(IMAGES_DIR, filename)
+
+                        with open(image_path, "wb") as f:
+                            f.write(image_bytes)
+
+                        response = {"request_id": request_id, "success": True}
+
+                    except Exception as e:
+                        response["error"] = f"Ошибка загрузки изображения: {e}"
+
+                elif action == "download_image":
+                    filename = data.get("filename")
+                    path = os.path.join(IMAGES_DIR, filename)
+                    try:
+                        if not os.path.exists(path):
+                            raise FileNotFoundError("Image not found")
+                        with open(path, "rb") as f:
+                            b64 = base64.b64encode(f.read()).decode()
+                        response = {"request_id": request_id, "success": True, "image": b64}
+                    except Exception as e:
+                        response = {"request_id": request_id, "success": False, "image": None, "error": str(e)}
+
+                # === MANAGEMENT VLAN ===
+                elif action == "list_mngmt_vlan":
+                    path = os.path.join(LISTS_DIR, "mngmtvlan.json")
+                    try:
+                        if os.path.exists(path):
+                            with open(path, "r", encoding="utf-8") as f:
+                                vlans = json.load(f)
+                        else:
+                            vlans = []
+                        response = {"request_id": request_id, "success": True, "vlans": vlans}
+                    except Exception as e:
+                        response["error"] = f"Ошибка чтения VLAN: {e}"
+
+                elif action == "save_mngmt_vlan":
+                    vlans = data.get("vlans")
+                    path = os.path.join(LISTS_DIR, "mngmtvlan.json")
+                    try:
+                        os.makedirs(os.path.dirname(path), exist_ok=True)
+                        with open(path, "w", encoding="utf-8") as f:
+                            json.dump(vlans, f, ensure_ascii=False, indent=4)
+                        response = {"request_id": request_id, "success": True}
+                    except Exception as e:
+                        response["error"] = f"Ошибка записи VLAN: {e}"
+
+                # === MASS PING (последним) ===
                 elif action == "ping_switches":
                     ping_data = data.get("ping_data", [])  # [{ "index": int, "ip": str }, ...]
                     timeout_ms = data.get("timeout_ms", CONFIG["ping_timeout_ms"])
@@ -300,7 +509,7 @@ async def handler(websocket):
                             results = []
                             ping_idx = 0
                             for item in ping_data:
-                                idx = item["index"]
+                                idx = item.get("index")
                                 if item.get("ip"):
                                     res = ping_results[ping_idx]
                                     results.append({"index": idx, "success": res["success"]})
@@ -318,29 +527,40 @@ async def handler(websocket):
                             response["error"] = f"Ping error: {str(e)}"
                             log(f"Ping switches error: {e}")
 
-                # === ОТПРАВКА ОТВЕТА ===
-                await websocket.send(json.dumps(response))
+                # === НЕИЗВЕСТНОЕ ДЕЙСТВИЕ ===
+                else:
+                    response = {"request_id": request_id, "success": False, "error": "Unknown action"}
 
-            except json.JSONDecodeError:
-                await websocket.send(json.dumps({"error": "Invalid JSON", "request_id": data.get("request_id")}))
+                # === ОТПРАВКА ОТВЕТА ===
+                await websocket.send(json.dumps(response, ensure_ascii=False))
+
             except Exception as e:
                 log(f"Handler error: {e}")
-                await websocket.send(json.dumps({"error": str(e), "request_id": data.get("request_id")}))
+                # Попробуем отправить ошибку клиенту (если есть request_id)
+                try:
+                    await websocket.send(json.dumps({"request_id": data.get("request_id") if 'data' in locals() and isinstance(data, dict) else None, "success": False, "error": str(e)}, ensure_ascii=False))
+                except Exception:
+                    # если отправка не удалась — просто логируем
+                    log(f"Failed to send error to client: {e}")
+
     except websockets.ConnectionClosed:
         log(f"Client disconnected: {client_ip}")
     except Exception as e:
         log(f"Connection error: {e}")
 
+
 # === ЗАПУСК СЕРВЕРА ===
 async def main():
-    host = "192.168.0.56"
+    host = "0.0.0.0"  # Слушаем на всех интерфейсах
     port = 8081
     log(f"WebSocket server STARTED → ws://{host}:{port}")
     async with websockets.serve(handler, host, port):
         await asyncio.Future()
 
+
 def run_server():
     asyncio.run(main())
+
 
 if __name__ == "__main__":
     run_server()

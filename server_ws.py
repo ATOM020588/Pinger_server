@@ -333,7 +333,7 @@ async def handler(websocket):
 
 # === ЗАПУСК СЕРВЕРА ===
 async def main():
-    host = "0.0.0.0"
+    host = "192.168.0.56"
     port = 8081
     log(f"WebSocket server STARTED → ws://{host}:{port}")
     async with websockets.serve(handler, host, port):

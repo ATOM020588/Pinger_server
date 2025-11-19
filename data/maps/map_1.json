@@ -3,10 +3,21 @@
         "name": "1",
         "width": "1200",
         "height": "800",
-        "mod_time": "2025-11-13 20:31:37"
+        "mod_time": "2025-11-13 20:43:53"
     },
     "switches": [],
-    "plan_switches": [],
+    "plan_switches": [
+        {
+            "id": 1,
+            "name": "weqweq",
+            "xy": {
+                "x": 567.0,
+                "y": 341.0
+            },
+            "model": "DES-3200-28 rev C",
+            "note": "wqeqweq"
+        }
+    ],
     "users": [],
     "soaps": [],
     "legends": [],

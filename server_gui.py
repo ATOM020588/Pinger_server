@@ -231,7 +231,7 @@ class ServerGUI(QMainWindow):
 
         # === СТИЛИ ===
         self.setStyleSheet("""
-            QMainWindow { background-color: #333; color: #FFC107; border: 1px solid #FFC107; }
+            QMainWindow { background-color: #333; color: #FFC107;  }
             QLabel { color: #FFC107; font-size: 14px; }
             QPushButton { 
                 background-color: #444; color: #FFC107; border: none; border-radius: 4px; padding: 8px 16px;
@@ -240,7 +240,7 @@ class ServerGUI(QMainWindow):
             QSpinBox { 
                 background-color: #444; color: #FFC107; border: 1px solid #555; border-radius: 4px; padding: 4px;
             }
-            QTextEdit { background-color: #444; color: #FFC107; border: 1px solid #555; border-radius: 4px; }
+            QTextEdit { background-color: #444; color: #FFC107; border: 1px solid #555; border-radius: 4px; border: 1px solid #FFC107; }
             QStatusBar { background-color: #333; color: #FFC107; }
         """)
         self.status.setStyleSheet("font-weight: bold; font-size: 14px;")

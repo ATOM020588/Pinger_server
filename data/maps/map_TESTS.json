@@ -3,11 +3,11 @@
         "name": "map_TESTS",
         "folder": "main",
         "age": "3",
-        "last_adm": "unknown",
-        "mod_time": "2025-11-13 18:19:09",
+        "last_adm": "berserk",
+        "mod_time": "2025-11-19 10:58:39",
         "def_vlan": "-1",
         "width": "1800",
-        "height": "1000",
+        "height": "900",
         "modifing": "none"
     },
     "switches": [
@@ -798,8 +798,8 @@
             "id": 5,
             "name": "tetetete",
             "xy": {
-                "x": 1380.0,
-                "y": 302.0
+                "x": 1361.0,
+                "y": 218.0
             },
             "model": "DES-3200-28 rev C",
             "note": ""

@@ -1,9 +1,9 @@
-# server_ws.py
 import asyncio
 import websockets
 import json
 import os
 import subprocess
+import csv
 from datetime import datetime
 import pickle
 
@@ -20,9 +20,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MAPS_DIR = os.path.join(DATA_DIR, "maps")
 OPERATORS_DIR = os.path.join(DATA_DIR, "operators")
+GLOBALS_DIR = os.path.join(DATA_DIR, "globals")
 
 os.makedirs(MAPS_DIR, exist_ok=True)
 os.makedirs(OPERATORS_DIR, exist_ok=True)
+os.makedirs(GLOBALS_DIR, exist_ok=True)
 
 
 # === ЛОГИРОВАНИЕ ===
@@ -52,6 +54,49 @@ def get_full_path(path):
     if not full_path.startswith(os.path.abspath(DATA_DIR)):
         raise ValueError("Invalid path: outside DATA_DIR")
     return full_path
+
+# === РАБОТА С CSV ===
+def read_csv(path):
+    """Читает CSV файл и возвращает список словарей"""
+    full_path = get_full_path(path)
+    if not os.path.exists(full_path):
+        return []
+    
+    try:
+        with open(full_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            return list(reader)
+    except Exception as e:
+        log(f"Error reading CSV {path}: {e}")
+        return []
+
+def write_csv(path, data):
+    """Записывает список словарей в CSV файл"""
+    full_path = get_full_path(path)
+    
+    # Создаем директорию если не существует
+    os.makedirs(os.path.dirname(full_path), exist_ok=True)
+    
+    if not data:
+        # Если данных нет, создаем пустой файл с заголовками
+        fieldnames = ["id", "date", "description", "tickets", "master", "executor", 
+                     "created", "transferred", "callback", "work_start", "call_history",
+                     "device_type", "device_id", "device_name", "device_ip"]
+        with open(full_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+        return True
+    
+    try:
+        fieldnames = list(data[0].keys())
+        with open(full_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data)
+        return True
+    except Exception as e:
+        log(f"Error writing CSV {path}: {e}")
+        return False
 
 # === ОБРАБОТЧИК КЛИЕНТА ===
 async def handler(websocket):
@@ -121,6 +166,28 @@ async def handler(websocket):
                             response = {"request_id": request_id, "success": True}
                         except Exception as e:
                             response["error"] = f"Write error: {e}"
+
+                # === ЧТЕНИЕ CSV ===
+                elif action == "csv_read":
+                    path = data.get("path")
+                    if not path:
+                        response["error"] = "No path provided"
+                    else:
+                        csv_data = read_csv(path)
+                        response = {"request_id": request_id, "success": True, "data": csv_data}
+
+                # === ЗАПИСЬ CSV ===
+                elif action == "csv_write":
+                    path = data.get("path")
+                    csv_data = data.get("data")
+                    if not path or not isinstance(csv_data, list):
+                        response["error"] = "Invalid path or data"
+                    else:
+                        success = write_csv(path, csv_data)
+                        if success:
+                            response = {"request_id": request_id, "success": True}
+                        else:
+                            response["error"] = "Write error"
 
                 # === АУТЕНТИФИКАЦИЯ ===
                 elif action == "auth_login":
